@@ -1,0 +1,108 @@
+name: Branch or Binding Proposal
+description: Propose a new language binding, platform package, or implementation branch
+title: "[Branch]: "
+labels: ["new-branch", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rotten Fish grows by adding branches. Each language binding, platform
+        package, and major subsystem lives on its own branch with its own
+        maintainers. Use this template to propose a new one.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight Checklist
+      options:
+        - label: I have checked the README and this branch does not already exist.
+          required: true
+        - label: I have searched existing issues for this proposal.
+          required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type of Proposal
+      options:
+        - Language binding
+        - Platform package
+        - New subsystem
+        - Port of an existing branch
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Proposed Branch Name
+      description: Follow the existing naming convention.
+      placeholder: "e.g. binding-ruby, binding-zig, pkg-arch, subsystem-vault-sync"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why This Branch?
+      description: |
+        Who needs it? How many people would benefit? What can they not do today
+        without it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What will this branch contain? What is explicitly out of scope?
+    validations:
+      required: true
+
+  - type: textarea
+    id: maintenance
+    attributes:
+      label: Maintenance Plan
+      description: |
+        Who will maintain this branch? Branches without a maintainer will be
+        archived. List yourself and anyone else who will help.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tooling
+    attributes:
+      label: Build, Test, and Packaging
+      description: |
+        How will it be built? How will it be tested? Where will it be published?
+    validations:
+      required: true
+
+  - type: textarea
+    id: abi
+    attributes:
+      label: Kernel Interface
+      description: |
+        How will it bind to the identity kernel? Native FFI, WebAssembly, a
+        pure reimplementation, or something else?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Prior art, similar projects, links to specifications.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: commitment
+    attributes:
+      label: Commitment
+      options:
+        - label: I commit to maintaining this branch or finding a maintainer for it.
+          required: true
+        - label: I understand this branch must follow the Code of Conduct and license.
+          required: true
