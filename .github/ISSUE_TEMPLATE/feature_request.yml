@@ -1,0 +1,105 @@
+name: Feature Request
+description: Suggest a new capability or improvement for Rotten Fish
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape Rotten Fish. Please describe the problem first,
+        then the solution. Features that solve a real, specific problem are far
+        more likely to be built.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight Checklist
+      options:
+        - label: I have searched existing issues and discussions for this idea.
+          required: true
+        - label: This is a feature request, not a bug report.
+          required: true
+        - label: I understand that large changes require discussion before code.
+          required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the project does this touch?
+      multiple: true
+      options:
+        - Kernel
+        - Cryptography
+        - Personal Data Vault
+        - Language Bindings
+        - Platform Packaging
+        - Command Line Interface
+        - Documentation
+        - Governance
+        - Accessibility
+        - Internationalization
+        - Developer Experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The Problem
+      description: What problem are you trying to solve? Who is affected? Be specific.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: What should Rotten Fish do? Describe the behavior you want.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches did you consider, and why did you reject them?
+    validations:
+      required: false
+
+  - type: textarea
+    id: who-benefits
+    attributes:
+      label: Who Benefits
+      description: |
+        Rotten Fish is built for everyone, not just developers. Describe who this
+        helps and how.
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and Breaking Changes
+      description: Does this change any public API, wire format, or credential schema?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: References, prior art, related standards, mockups, anything useful.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Would You Like to Work on This?
+      options:
+        - label: I would like to implement this feature.
+          required: false
+        - label: I can help with design, testing, or documentation.
+          required: false
