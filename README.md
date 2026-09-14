@@ -596,7 +596,7 @@ Every contribution is licensed under MIT. There is no CLA. There is no corporate
 
 ## License
 
-MIT. See [LICENSE.txt](https://github.com/bedulabs/rottenfish/blob/master/LICENSE.txt).
+MIT. See [LICENSE](https://github.com/bedulabs/rottenfish/blob/master/LICENSEl).
 
 You can use this commercially, fork it, sell it, embed it, and never speak to us again. That is the point.
 
